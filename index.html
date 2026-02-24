@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indira Gandhi Niwasi Apang Vidhyalay, Madlapur</title>
+<link rel="icon" href="Assets/Logo.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+body{background:#f5f9ff;color:#222;overflow-x:hidden;}
+section{padding:90px 10%;}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html, body{
+overflow-x:hidden;
+width:100%;
+}
+
+/* Navbar */
+/* Header */
+header{
+position:fixed;
+top:0;
+width:100%;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#ff9b00f7;
+backdrop-filter:blur(12px);
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
+z-index:1000;
+}
+
+/* Logo */
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:600;
+color:white;
+
+}
+
+.logo img{
+height:40px;
+border-radius:20px;
+}
+
+/* Nav Links */
+nav{
+display:flex;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#333;
+}
+
+/* Hamburger */
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+color:#ff9b00;
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+
+nav{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+flex-direction:column;
+background:white;
+display:none;
+padding:20px 0;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+nav a{
+text-align: center;
+}
+
+nav.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+}
+
+/* Hero */
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+color:#fff;
+padding:0 20px;
+background:url('Assets/bg.jpeg') no-repeat center center/cover;
+}
+
+/* Dark overlay for readability */
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+z-index:1;
+}
+
+/* Animated gradient overlay */
+.hero::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(-45deg, rgba(79, 172, 254, 0.6), rgb(252 252 252), rgba(102, 126, 234, 0.6))
+background-size:400% 400%;
+animation:gradientFlow 12s ease infinite;
+z-index:2;
+}
+
+/* Hero Content */
+.hero div{
+position:relative;
+z-index:3;
+max-width:800px;
+padding:20px;
+}
+
+.hero h1{
+font-size:3.2rem;
+font-weight:700;
+margin-bottom:20px;
+text-shadow:0 4px 25px rgba(0,0,0,0.6);
+}
+
+.hero p{
+margin-bottom:25px;
+color:#f0f0f0;
+}
+
+.btn{
+padding:14px 35px;
+border-radius:50px;
+background:#ff9b00;
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:0.3s ease;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+@media(max-width:480px){
+.hero{
+padding:0 15px;
+}
+header{
+ width:100%;
+}
+body{
+ overflow-x:hidden;
+}
+.hero h1{
+margin-top:23%;
+font-size:175%;
+}
+
+.hero p{
+margin-bottom:-2%;
+
+}
+.hero .btn{
+    padding: 5px 8px;
+}
+
+#Vids
+{
+   width: 232px;
+}
+}
+
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* Gradient Animation */
+@keyframes gradientFlow{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+/* About */
+.about{
+background:#ffffff;
+border-radius:20px;
+}
+.about h2{color:#ff9b00;margin-bottom:20px;text-align:center;}
+
+/* Vision Mission Unique Style */
+.vm-wrapper{
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:40px;
+}
+.vm-card{
+flex:1 1 300px;
+padding:35px;
+border-radius:20px;
+background:linear-gradient(145deg,#ffffff,#ffe6e6);
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+.vm-card::before{
+content:"";
+position:absolute;
+width:200%;
+height:200%;
+background:radial-gradient(circle,rgba(0,102,255,0.15),transparent 70%);
+top:-50%;
+left:-50%;
+transform:rotate(25deg);
+}
+.vm-card:hover{
+transform:translateY(-10px);
+}
+.vm-card h3{
+margin-bottom:15px;
+color:#ff9b00;
+}
+
+/* Gallery */
+/* Gallery Section Styled Like Contact */
+.gallery-glass{
+padding:100px 10%;
+background:linear-gradient(120deg,#f0f6ff,#ffffff);
+text-align:center;
+}
+
+.gallery-glass h2{
+font-size:2.5rem;
+color:#ff9b00;
+margin-bottom:60px;
+}
+
+/* Grid */
+.gallery-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+/* Glass Card */
+.gallery-card{
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(15px);
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+transition:0.4s ease;
+}
+
+.gallery-card:hover{
+transform:translateY(-10px);
+box-shadow:0 30px 60px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.gallery-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+display:block;
+}
+
+/* Content */
+.gallery-content{
+padding:25px;
+}
+
+.gallery-content h3{
+color:#0044cc;
+margin-bottom:10px;
+}
+
+.gallery-content p{
+color:#555;
+font-size:14px;
+}
+/* Hover Effects */
+.gallery-item:hover img{
+transform:scale(1.1);
+filter:brightness(0.7);
+}
+
+.overlay{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+padding:20px;
+color:#fff;
+font-weight:600;
+background:linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+transform:translateY(100%);
+transition:0.4s ease;
+}
+
+.gallery-item:hover .overlay{
+transform:translateY(0);
+}
+
+/* Subtle floating effect */
+.gallery-item:hover{
+transform:translateY(-8px);
+}
+
+/* Responsive spacing */
+@media(max-width:768px){
+.gallery-modern{
+padding:80px 5%;
+}
+}
+/* Contact */
+.contact-modern{
+padding:100px 10%;
+text-align:center;
+background:linear-gradient(120deg,#f0f6ff,#ffffff);
+}
+
+.contact-modern h2{
+font-size:2.5rem;
+color:#ff9b00;
+margin-bottom:60px;
+}
+
+.contact-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.contact-card{
+padding:40px 30px;
+border-radius:20px;
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(15px);
+transition:0.4s ease;
+position:relative;
+overflow:hidden;
+}
+
+.contact-card:hover{
+transform:translateY(-10px);
+box-shadow:0 30px 60px rgba(0,0,0,0.15);
+}
+
+.contact-card .icon{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.contact-card h3{
+margin-bottom:15px;
+color:#ff9b00;
+}
+
+.contact-card p{
+color:#555;
+font-size:15px;
+line-height:1.6;
+}
+/* Footer */
+footer{
+background:#002b66;
+color:#fff;
+padding:40px 10%;
+margin-top:60px;
+}
+footer .footer-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+gap:30px;
+}
+footer h4{margin-bottom:15px;}
+footer p, footer a{
+color:#ccc;
+font-size:14px;
+text-decoration:none;
+display:block;
+margin-bottom:8px;
+}
+
+/* Modal */
+.modal{
+display:none;
+position:fixed;
+z-index:2000;
+padding-top:100px;
+left:0;top:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.8);
+}
+.modal img{
+margin:auto;
+display:block;
+max-width:80%;
+border-radius:10px;
+}
+.close{
+position:absolute;
+top:40px;right:50px;
+font-size:40px;
+color:#fff;
+cursor:pointer;
+}
+
+/* Animations */
+@keyframes fadeDown{
+from{opacity:0;transform:translateY(-40px);}
+to{opacity:1;transform:translateY(0);}
+}
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* Modern Video Section */
+.video-modern{
+padding:100px 10%;
+background:linear-gradient(135deg,#ffffff,#f2f7ff);
+text-align:center;
+position:relative;
+}
+
+/* Decorative Glow */
+.video-modern::before{
+content:"";
+position:absolute;
+width:350px;
+height:350px;
+background:radial-gradient(circle, rgba(0,102,255,0.15), transparent 70%);
+top:-100px;
+right:-100px;
+z-index:0;
+}
+
+.video-modern h2{
+font-size:2.5rem;
+color:#ff9b00;
+margin-bottom:15px;
+position:relative;
+z-index:1;
+}
+
+.video-subtitle{
+color:#555;
+margin-bottom:50px;
+font-size:16px;
+position:relative;
+z-index:1;
+}
+
+/* Glass Video Container */
+.video-wrapper{
+max-width:900px;
+margin:0 auto;
+padding:20px;
+border-radius:25px;
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(15px);
+box-shadow:0 25px 60px rgba(0,0,0,0.1);
+transition:0.4s ease;
+position:relative;
+z-index:1;
+}
+
+.video-wrapper:hover{
+transform:translateY(-8px);
+box-shadow:0 35px 80px rgba(0,0,0,0.15);
+}
+
+.video-wrapper iframe{
+width:100%;
+height:500px;
+border-radius:15px;
+border:none;
+}
+
+/* Responsive */
+@media(max-width:768px){
+.video-wrapper iframe{
+height:250px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <b>PNMNAV udgir</b>
+  </div>
+
+  <nav id="nav-menu">
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+    <a href="#contact" onclick="toggleMenu()" >Contact</a>
+  </nav>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    ☰
+  </div>
+</header>
+
+<section class="hero" id="home">
+<div>
+<h1>Premnath maharaj nivasi apang vidhyalay.</h1>
+<a href="#about" class="btn">Learn More</a>
+<a href="#contact" class="btn">Get in Touch</a>
+</div>
+</section>
+
+<section class="about" id="about">
+<h2>About Us</h2>
+<p style="text-align:center;max-width:700px;margin:auto;">
+Premnath maharaj nivasi apang vidhyalay,udgir is dedicated to providing quality education and care for physically impaired students from Grade 1 through 7. Our school focuses on inclusive learning, personal development, and skill-building in a supportive and compassionate environment. We believe every child deserves dignity, opportunity, and the confidence to build a bright and independent future.
+</p>
+</section>
+
+<section id="vision">
+<h2 style="text-align:center;color:#ff9b00;">Our Vision, Mission & Community</h2>
+
+<div class="vm-wrapper">
+
+<div class="vm-card">
+<h3>🌟 Our Vision</h3>
+<p>
+To be a beacon of hope and excellence in special education, where every child discovers their potential and builds a confident future.
+</p>
+</div>
+
+<div class="vm-card">
+<h3>🚀 Our Mission</h3>
+<p>
+Our mission is to provide quality education and supportive care for physically impaired students from Grade 1 through 7, helping them grow with confidence, dignity, and independence.
+</p>
+</div>
+
+<div class="vm-card">
+<h3>🤝 Our Community</h3>
+<p>
+Students, dedicated staff, and supportive families come together to create a warm, caring environment where everyone belongs.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="gallery-glass" id="gallery">
+<h2 class="video-modern">Life at Our school</h2>
+<div class="gallery-container">
+
+  <div class="gallery-card">
+    <img src="Assets/g1.jpeg">
+    <div class="gallery-content">
+
+    </div>
+  </div>
+
+  <div class="gallery-card">
+    <img src="Assets/g2.jpeg">
+    <div class="gallery-content">
+
+    </div>
+  </div>
+
+  <div class="gallery-card">
+    <img src="Assets/g3.jpeg">
+    <div class="gallery-content">
+
+    </div>
+  </div>
+
+  <div class="gallery-card">
+    <img src="Assets/g4.jpeg">
+    <div class="gallery-content">
+    </div>
+  </div>
+
+<div class="gallery-card">
+    <img src="Assets/g5.jpeg">
+    <div class="gallery-content">
+    </div>
+  </div>
+  <div class="gallery-card">
+    <img src="Assets/g6.jpeg">
+    <div class="gallery-content">
+    </div>
+  </div>
+  <div class="gallery-card">
+    <img src="Assets/g7.jpeg">
+    <div class="gallery-content">
+    </div>
+  </div>
+  <div class="gallery-card">
+    <img src="Assets/g8.jpeg">
+    <div class="gallery-content">
+    </div>
+  </div>
+  <div class="gallery-card">
+    <img src="Assets/g9.jpeg">
+    <div class="gallery-content">
+    </div>
+  </div>
+  <div class="gallery-card">
+    <img src="Assets/g10.jpeg">
+    <div class="gallery-content">
+    </div>
+  </div>
+  <div class="gallery-card">
+    <img src="Assets/g11.jpeg">
+    <div class="gallery-content">
+    </div>
+  </div>
+  <div class="gallery-card">
+    <img src="Assets/g12.jpeg">
+    <div class="gallery-content">
+    </div>
+  </div>
+  <div class="gallery-card">
+    <img src="Assets/g13.jpeg">
+    <div class="gallery-content">
+    </div>
+  </div>
+  <div class="gallery-card">
+    <img src="Assets/g14.jpeg">
+    <div class="gallery-content">
+    </div>
+  </div>
+  
+  
+</div>
+</section>
+
+<section class="contact-modern" style="Display:none;">
+  <h2>Our Impact in Action</h2>
+  <p class="video-subtitle">
+    Watch our story.
+  </p>
+<div class="contact-container" >
+  <div class="contact-card" id ="Video">
+    <iframe 
+      src="Assets/Story.mp4" 
+      allowfullscreen  id="Vids" >
+    </iframe>
+  </div> <div class="contact-card" id ="Video">
+    <iframe 
+      src="Assets/Story2.mp4" 
+      allowfullscreen id="Vids" >
+    </iframe>
+  </div>
+  </div>
+</section>
+<section class="contact-modern" id="contact">
+<h2>Contact Us</h2>
+
+<div class="contact-container">
+
+<div class="contact-card">
+<div class="icon">📍</div>
+<h3>Our Address</h3>
+<p>Premnath maharaj nivasi apang vidhyalay, Veer savarkar chowk shelhal road udgir tq: udgir dist : latur</p>
+</div>
+
+<div class="contact-card">
+<div class="icon">📞</div>
+<h3>Phone</h3>
+<p>+91 9960323404</p>
+</div>
+
+<div class="contact-card">
+<div class="icon">📧</div>
+<h3>Email</h3>
+<p>dharmapalbiradar@gmail.com</p>
+</div>
+
+
+</div>
+</section>
+
+<footer>
+<div class="footer-grid">
+<div>
+<h4>Premnath maharaj nivasi apang vidhyalay</h4>
+<p>We believe every child deserves dignity,<p> opportunity, and the confidence<p/> to build a bright and independent future.</p>
+
+</div>
+<div>
+<h4>Quick Links</h4>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</div>
+<div style="Float:right;">
+<h4>Contact</h4>
+<p>Email: dharmapalbiradar@gmail.com</p>
+<p>Phone: +91 9960323404</p>
+</div>
+ <div>
+ 
+ </div>
+</div>
+<hr/>
+<br/>
+<center> <p>© 2026 Premnath maharaj nivasi apang vidhyalay, All Rights Reserved. </p> </center>
+<br/>
+ <center> <p>made with ❤️ By <a href="https://www.linkedin.com/in/vipin-kumar-1938b9170?trk=contact-info" target="_blank" style="text-color:white;">Vipin Kumar </a> </p> </center>
+</footer>
+
+<div id="myModal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
+<img id="modalImg">
+</div>
+
+<script>
+function toggleMenu(){
+  document.getElementById("nav-menu").classList.toggle("active");
+}
+</script>
+</body>
+</html>
